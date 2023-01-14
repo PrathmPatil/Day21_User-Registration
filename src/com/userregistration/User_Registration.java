@@ -92,7 +92,7 @@ public class User_Registration {
 		System.out.println("Enter Passward: ");
 		try {
 		userpassward=sc.nextLine();
-		boolean checkpassward=Pattern.matches("^[A-Za-z0-9@#$%^&*()|?/]{8,}$", userpassward);
+		boolean checkpassward=Pattern.matches("^(?=.*[A-Z]){1,}.*[a-z0-9@#$%^&*()|?/]{7,}$", userpassward);
 		if(checkpassward==true)
 		{
 			System.out.println(checkpassward);		
