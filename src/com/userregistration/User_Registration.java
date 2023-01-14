@@ -65,9 +65,27 @@ public class User_Registration {
 		{
 			System.out.println("Enter Valid mail");
 		}
-		
-		//^abc.[a-zA-Z0-9+_-]+@bl.co.[a-zA-Z0-9-]+$
-//		System.out.println(checkmail);
+	}
+	void phoneNumber() throws UserException {
+		String userphoneNumber;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Phone Number: ");
+		try {
+		userphoneNumber=sc.nextLine();
+		boolean checkphoneNumber=Pattern.matches("[+]?{1}[0-9]{2}[\s]?{1}[0-9]{10}", userphoneNumber);
+		if(checkphoneNumber==true)
+		{
+			System.out.println(checkphoneNumber);		
+		}
+		else
+		{
+			throw new  UserException("Here an exceptin has come");
+		}
+		}catch( UserException e)
+		{
+			System.out.println("Enter Valid phoneNumber");
+		}
+	
 		
 	}
 
