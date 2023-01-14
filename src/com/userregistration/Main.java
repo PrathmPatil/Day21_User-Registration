@@ -7,7 +7,8 @@ public class Main {
 //		obj.firstName();
 //		obj.lastName();
 //		obj.gmail();
-		obj.phoneNumber();
+//		obj.phoneNumber();
+		obj.passward();
 	}
 
 }

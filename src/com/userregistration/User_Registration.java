@@ -85,8 +85,26 @@ public class User_Registration {
 		{
 			System.out.println("Enter Valid phoneNumber");
 		}
-	
-		
+	}
+	void passward() throws UserException {
+		String userpassward;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Passward: ");
+		try {
+		userpassward=sc.nextLine();
+		boolean checkpassward=Pattern.matches("^[A-Za-z0-9@#$%^&*()|?/]{8,}$", userpassward);
+		if(checkpassward==true)
+		{
+			System.out.println(checkpassward);		
+		}
+		else
+		{
+			throw new  UserException("Here an exceptin has come");
+		}
+		}catch( UserException e)
+		{
+			System.out.println("Enter Valid passward");
+		}
 	}
 
 }
