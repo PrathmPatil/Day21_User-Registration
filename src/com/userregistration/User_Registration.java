@@ -107,5 +107,25 @@ public class User_Registration {
 			System.out.println("Enter Valid passward");
 		}
 	}
-
+	void gmailList(String usergmail)throws UserException  {
+		/*
+		 * Check Gmail are volid or not				
+		 */
+		// need abc number . -
+		
+		try {
+		boolean checkmail=Pattern.matches("^[a-zA-Z0-9]+([._-[+]][a-zA-Z0-9]+)*@([a-z1-9]+)([.][a-z]*)?(\\.[a-z]{2,})$", usergmail);
+		if(checkmail==true)
+		{
+			System.out.println(checkmail);		
+		}
+		else {
+			throw new  UserException("Here an exceptin has come");
+		}
+		}catch( UserException e)
+		{
+			System.out.println("Enter Valid mail");
+		}
+	}
 }
+
