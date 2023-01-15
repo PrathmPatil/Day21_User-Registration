@@ -97,6 +97,7 @@ public class User_Registration {
 		{
 			System.out.println(checkpassward);		
 		}
+		
 		else
 		{
 			throw new  UserException("Here an exceptin has come");
